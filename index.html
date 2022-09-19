@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
+    <title>Vacation Time!</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,83 +12,85 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <form method="GET" action="results.html">
+        <form method="GET" action="results.html">    
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="firstname">Your First Name<span class="required-field">*</span></label>
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
+                <label for="lastname">Your Last Name<span class="required-field">*</span></label>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                <label for="age">Your Age</label>
+                <input type="number" id="age" name="age" min="21" max="120">
+                <h5>You have to be 21 years or older to enter this contest.</h5>
+                <label for="password">Your Secret Code (Must be 6 alphanumeric characters.)<span class="required-field">*</span></label>
+                <input type="password" id="password" name="password" pattern="[0-9a-zA-Z]{6}" title="6 character alphanumeric password." required>
             </div>
+            
             <fieldset>
-                <legend>Your Contact Info</legend>
-                <div>
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div>
-                    <label for="address">Your Street Address</label>
-                    <input type="text" id="address" name="address">
-                </div>
-                <div>
-                    <label for="city">Your City</label>
-                    <input type="text" id="city" name="city">
-                    <label for="state">Your State</label>
-                    <input list="state-list" id="state" name="state">
-                    <datalist id="state-list">
-                        <option value="AK">Alaska</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="CA">California</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="CO">Colorado</option>
-                        <option value="DE">Delaware</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="IA">Iowa</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="MA">Massachussets</option>
-                        <option value="MD">Maryland</option>
-                        <option value="ME">Maine</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MT">Montana</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NY">New York</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VA">Virginia</option>
-                        <option value="VT">Vermont</option>
-                        <option value="WA">Washington</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WY">Wyoming</option>
-                    </datalist>
-                    <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
-                </div>
+                <legend>About you!</legend>
+                <label for="email">Your Email<span class="required-field">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <label for="address">Your current address<span class="required-field">*</span></label>
+                <input type="address" id="address" name="Address">
+                <label for="city">City</label>
+                <input type="city" id="city" name="city">
+                <label for="state">State</label>
+                <select name="state" id="state-select" id="state-select">
+                    <option value="">-- Please Select a State--</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CA">California</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="CO">Colorado</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="IA">Iowa</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MA">Massachussets</option>
+                    <option value="MD">Maryland</option>
+                    <option value="ME">Maine</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MT">Montana</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NY">New York</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VA">Virginia</option>
+                    <option value="VT">Vermont</option>
+                    <option value="WA">Washington</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+                <label for="zipcode">Zip Code</label>
+                <input type="text" id="zipcode" name="zipcode" title="5-Digit US ZIP Code" pattern="[0-9]{5}">
             </fieldset>
+<fieldset>
+    <legend>
 
             <fieldset>
                 <legend>Your Preferences</legend>
